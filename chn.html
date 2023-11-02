@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>the Book of Answers online - Tell you everything you want to know</title>
+	<meta name="keywords" content="the Book Of Answers,the Book Of Answers Online,the Book Of Love Answers Online">
+	<meta name="description"
+		content="When you sense the time is right,tap The Book of Answers Online and here will be your answer.">
+	<link rel="shortcut icon" href="https://www.thebookofanswersonline.com/favicon.ico">
+
+	<link rel="stylesheet" href="./source/bootstrap.min.css">
+	<link rel="stylesheet" href="./source/common.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="./source/css2" rel="stylesheet">
+
+	<script src="./source/jquery-1.9.1.min.js"></script>
+	<script src="./source/layer.js"></script>
+	<link rel="stylesheet" href="./source/layer.css" id="layuicss-skinlayercss">
+	<script src="./source/clipboard.min.js"></script>
+	<!-- <script src="./source/FileSaver.min.js"></script> -->
+	<!-- <script src="./source/vue.js"></script> -->
+	<script src="./source/bootstrap.js"></script>
+	<script async="" src="./source/f.txt" crossorigin="anonymous"></script>
+	<script src="./source/dropdown.js"></script>
+	<style>
+		.--savior-overlay-transform-reset {
+			transform: none !important;
+		}
+
+		.--savior-overlay-z-index-top {
+			z-index: 2147483643 !important;
+		}
+
+		.--savior-overlay-position-relative {
+			position: relative;
+		}
+
+		.--savior-overlay-position-static {
+			position: static !important;
+		}
+
+		.--savior-overlay-overflow-hidden {
+			overflow: hidden !important;
+		}
+
+		.--savior-overlay-overflow-x-visible {
+			overflow-x: visible !important;
+		}
+
+		.--savior-overlay-overflow-y-visible {
+			overflow-y: visible !important;
+		}
+
+		.--savior-overlay-z-index-reset {
+			z-index: auto !important;
+		}
+
+		.--savior-overlay-display-none {
+			display: none !important;
+		}
+
+		.--savior-overlay-clearfix {
+			clear: both;
+		}
+
+		.--savior-overlay-reset-filter {
+			filter: none !important;
+			backdrop-filter: none !important;
+		}
+
+		.--savior-tooltip-host {
+			z-index: 9999;
+			position: absolute;
+			top: 0;
+		}
+
+		/*Override css styles for Twitch.tv*/
+		main.--savior-overlay-z-index-reset {
+			z-index: auto !important;
+		}
+
+		.modal__backdrop.--savior-overlay-z-index-reset {
+			position: static !important;
+		}
+
+		main.--savior-overlay-z-index-top {
+			z-index: auto !important;
+		}
+
+		main.--savior-overlay-z-index-top .channel-root__player-container+div,
+		main.--savior-overlay-z-index-top .video-player-hosting-ui__container+div {
+			opacity: 0.1;
+		}
+
+		/*Dirty hack for facebook big video page e.g: https://www.facebook.com/abc/videos/...*/
+		.--savior-backdrop {
+			position: fixed !important;
+			z-index: 2147483642 !important;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw !important;
+			background-color: rgba(0, 0, 0, 0.9);
+		}
+
+		.--savior-overlay-twitter-video-player {
+			position: fixed;
+			width: 80%;
+			height: 80%;
+			top: 10%;
+			left: 10%;
+		}
+
+		.--savior-overlay-z-index-reset [data-testid="sidebarColumn"],
+		.--savior-overlay-z-index-reset header[role="banner"],
+		.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:first-child,
+		.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:nth-child(3) {
+			z-index: -1 !important;
+		}
+
+		/* Fix conflict css with zingmp3 */
+		.zm-video-modal.--savior-overlay-z-index-reset {
+			position: absolute;
+		}
+
+		/* Dirty hack for xvideos99 */
+		#page #main.--savior-overlay-z-index-reset {
+			z-index: auto !important;
+		}
+
+		/* Overlay for ok.ru */
+		#vp_w.--savior-overlay-z-index-reset.media-layer.media-layer__video {
+			overflow-y: hidden;
+			z-index: 2147483643 !important;
+		}
+
+		/* Fix missing controller for tv.naver.com */
+		.--savior-overlay-z-index-top.rmc_controller,
+		.--savior-overlay-z-index-top.rmc_setting_intro,
+		.--savior-overlay-z-index-top.rmc_highlight,
+		.--savior-overlay-z-index-top.rmc_control_settings {
+			z-index: 2147483644 !important;
+		}
+
+		/* Dirty hack for douyi.com */
+		.swiper-wrapper.--savior-overlay-z-index-reset .swiper-slide:not(.swiper-slide-active),
+		.swiper-wrapper.--savior-overlay-transform-reset .swiper-slide:not(.swiper-slide-active) {
+			display: none;
+		}
+
+		.videoWrap+div>div {
+			pointer-events: unset;
+		}
+
+		/* Dirty hack for fpt.ai */
+		.mfp-wrap.--savior-overlay-z-index-top {
+			position: relative;
+		}
+
+		.mfp-wrap.--savior-overlay-z-index-top .mfp-close {
+			display: none;
+		}
+
+		.mfp-wrap.--savior-overlay-z-index-top .mfp-content {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset+nav {
+			z-index: -1 !important;
+		}
+
+		section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset section.--savior-overlay-z-index-reset div.--savior-overlay-z-index-reset~div {
+			position: relative;
+		}
+
+		div[class^="tiktok"].--savior-overlay-z-index-reset {
+			z-index: 2147483644 !important;
+		}
+
+		@-moz-keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@-webkit-keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@-o-keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1125.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+
+	<div id="app">
+
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="page-header mgt-0">
+						<div class="language-container">
+							<h3>
+								<a href="#" target="_self">The Book of Answers</a>
+							</h3>	
+							<div class="text-center">
+								<div class="dropdown">
+									<button onclick="myFunction()" class="dropbtn">语言</button>
+									  <div id="myDropdown" class="dropdown-content">
+										<a href="./index.html">ENGLISH [ENG]</a>
+										<a href="./chn.html">CHINESE [CHN]</a>
+										<a href="./spn.html">SPANISH [SPN]</a>
+										<a href="./por.html">PORTUGUESE [POR]</a>
+										<a href="./rus.html">RUSSIAN [RUS]</a>
+										<a href="./jpn.html">JAPANESE [JPN]</a>
+										<a href="./ger.html">GERMAN [GER]</a>
+										<a href="./frn.html">FRENCH [FRN]</a>
+										<a href="./vie.html">VIETNAMESE [VIE]</a>
+										<a href="./pql.html">POLISH [PQL]</a>
+										<a href="./ukr.html">UKRAINIAN [UKR]</a>
+										<a href="./itn.html">ITALIAN [ITN]</a>
+										<a href="./azb.html">AZERBAIJANI [AZB]</a>
+									  </div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-12">
+					<div class="title-box text-center">
+						<h2>当你遇到无法解决的问题时，《答案之书》将为你提供答案……
+						</h2>
+						<p style="margin: 15px 0 30px">当你觉得时机成熟时，点击答案之书，就会有你的答案。</p>
+						<div class="book-box">
+
+							<div id="pic-box" class="pic-box">
+								<a href="javascript:;" onclick="getRes()">
+									<img src="./source/the-Book-of-Answers-online.jpg" id="book-img">
+									<p style="margin: 30px auto; color: darkgoldenrod;">闭上眼睛，专注于一个问题 3 秒钟，然后点击书本 👆</p>
+								</a>
+							</div>
+
+							<!-- 这里是调用变量的值 - 支持HTML显示-->
+							<div id="res-box" class="display-none">
+								<div class="res-box">
+									<div class="randomAnswer">
+										<p id="randomAnswerEn">现在你可以</p>
+										<p id="randomAnswerZh"></p>
+									</div>
+								</div>
+								<p>
+								</p>
+								<div class="btn btn-success btn-lg btn-next-answer" style="background-color: chocolate; border-color: chocolate;">
+									<a href="javascript:window.location.reload()">获取下一个答案 &gt;&gt;</a>
+								</div>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-12">
+
+					<h2>什么是在线答案之书？</h2>
+					<p>《在线答案之书》是纸质书《答案之书》的数字和在线版本。 当你遇到解决不了的问题时，在线解答之书会给你答案......</p>
+					<p>你不需要纸质书，只要打开这个在线版本，你就会得到日常生活中所有问题的解决方案。</p>
+					<p></p>
+					<p></p>
+
+					<h2>FAQs</h2>
+
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="https://www.thebookofanswersonline.com/#collapseOne">
+										什么是在线答案之书？
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">《答案之书》是卡罗尔·博尔特创作的一本书，《答案之书》里有日常生活中所有问题的解决方案，只要提出问题，打开书，你就会找到答案。
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="https://www.thebookofanswersonline.com/#collapseTwo">
+										什么是在线答案之书？
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">《在线答案之书》是《答案之书》的数字版本，它提供了一种在线获取答案的简单方法。 本站所有答案均与《答案之书》相同。
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="https://www.thebookofanswersonline.com/#collapseThree">
+										如何在线使用《答案之书》？
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">专注于一个问题，闭上眼睛冥想5秒钟，然后点击答案之书，它会告诉你答案。
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="https://www.thebookofanswersonline.com/#collapseFour">
+										如何与《答案之书》纸质书一起使用？
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse">
+								<div class="panel-body">如果您有一本纸质的《答案之书》，只需将合上的书拿在手中，花十到十五秒专注于您的问题即可。 想象或大声说出你的问题时，将一只手掌放在书的封面上，并从后到前抚摸书页的边缘。 当您觉得时机成熟时，打开手指触摸的页面，就会有您的答案！ 你的答案是什么？
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="https://www.thebookofanswersonline.com/#collapseFive">
+										答案正确吗？
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse">
+								<div class="panel-body">
+									由你决定！ 《答案之书》很有趣，很有启发性，而且用起来很有趣。对你的问题保持积极的态度，它就能得到完美的解决，所以正确的答案永远在你的脑海里，只要立即做就可以了。
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-12">
+						<!-- <div class="foot_nav text-center">
+							<ul class="list-inline">
+								<li><a href="https://www.thebookofanswersonline.com/" target="_blank">Home</a></li>
+								<li><a href="https://www.thebookofanswersonline.com/about" target="_blank">About</a>
+								</li>
+								<li><a href="https://www.thebookofanswersonline.com/faqs" target="_blank">FAQs</a></li>
+								<li><a href="https://www.thebookofanswersonline.com/terms" target="_blank">Terms of
+										Service</a></li>
+								<li><a href="https://www.thebookofanswersonline.com/privacy-policy"
+										target="_blank">Privacy Policy</a></li>
+							</ul>
+						</div> -->
+						<!-- <div class="foot_link text-center">
+							<ul class="list-inline fren_link">
+								<li><a href="./index.html" target="_blank">The Book Of
+										Answers</a></li>
+								<li><a href="./vi.html">Tieng Viet</a></li>
+								<li><a href="https://www.thebookofanswersonline.com/zh-tw" target="_blank">答案之書</a></li>
+							</ul>
+						</div> -->
+
+						<div class="copyright text-center">
+							《答案之书》由卡罗尔·博尔特创建，该网站为您提供在线获取答案的简单方法。
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./source/common.js"></script>
+	</div>
+</body>
+
+</html>
