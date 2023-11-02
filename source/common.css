@@ -459,6 +459,7 @@ footer .foot_link {
 
 #book-img {
   width: auto;
+  max-width: 300px;
   @media screen and (max-width: 768px)  {
     max-width: 80% !important;
   } 
